@@ -1,0 +1,46 @@
+header {
+    background-color: $header-bg-color;
+    position: sticky;
+    top: 0;
+    left: 0;
+
+    .container {
+        @include flex-center;
+        justify-content: space-between;
+        padding: 16px 0;
+
+        .branding {
+            display: flex;
+            align-items: center;
+
+            img {
+                margin-right: 16px;
+                width: 120px; // Ajuste o valor conforme necessário
+                height: auto; // Mantém a proporção da imagem
+            }
+
+            h1 {
+                color: $menu-item-color;
+                font-size: 24px;
+            }
+        }
+    }
+
+    .menu {
+        display: flex;
+
+        li {
+            font-weight: bold;
+            margin-left: 24px;
+
+            a {
+                color: $menu-item-color;
+                text-decoration: none;
+
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }
+}
